@@ -1,0 +1,18 @@
+doctype html
+html
+  block config
+    include ../config/config.pug
+  head
+    meta(charset="utf-8")
+    block head
+      title= page_title + " | " + page
+      meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
+      each link in css
+        link(rel="stylesheet" href='css/' + link)
+  body
+    block header
+      include ../blocks/header.pug
+    block tubevidemp4
+    block tubevidemp3
+    block footer
+      include ../blocks/footer.pug

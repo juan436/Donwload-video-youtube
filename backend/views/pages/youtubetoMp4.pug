@@ -1,0 +1,16 @@
+extends ../templates/template
+block append config
+  - page_title = "tubefastvide";
+  - pagina_actual = "principal";
+
+block tubevidemp4
+  form(action="/convertir" method="post")
+    label(for="enlace") Convertir Youtube a mp4
+    input(type="text" id="enlace" name="enlace" placeholder="Buscar o pegar enlace aqui...")
+    button(type="submit") Empezar
+  section
+    h3 ¿Cómo convertir videos Youtube?
+    ol
+      li Pega la URL de YouTube o inserta las palabras clave en la caja de búsqueda.
+      li Escoge el formato de salida al cuál quieres convertir.
+      li Espera hasta que la conversión sea completada y descarga
