@@ -1,17 +1,18 @@
 extends ../templates/template
 
 block append config
-  - pagina_actual = "secundaria";
+  - page_title = "tubefastvide";
+  - pagina_actual = "principal";
 
 block tubevidemp4
   .block
-    form(action="/convertir" method="post" class="form-container")
+    form(action="/api/DonwloadVideo/formatomp3" method="post" class="form-container" enctype="x-www-form-urlencoded")
       label(for="enlace") Convertir Youtube a mp3
       .input-container
-        input(type="text" id="enlace" name="enlace" placeholder="Buscar o pegar enlace aqui...")
+        input(type="text" id="enlace" name="url" placeholder="Buscar o pegar enlace aqui...")
         button(type="submit") Empezar
     section
-      h3 ¿Cómo convertir videos Youtube?
+      h3 ¿Cómo convertir videos Youtube a Mp3?
       ol
         li Pega la URL de YouTube o inserta las palabras clave en la caja de búsqueda.
         li Escoge el formato de salida al cuál quieres convertir.

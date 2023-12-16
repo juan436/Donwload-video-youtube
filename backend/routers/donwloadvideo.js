@@ -4,10 +4,10 @@ const ytdl = require('ytdl-core');
 const routerDonwloadVideo = express.Router();
 routerDonwloadVideo.use(express.json());
 
-routerDonwloadVideo.get('/formatomp4', async (req, res) => {
+routerDonwloadVideo.post('/formatomp4', async (req, res) => {
 
     try {
-        var url = req.query.url;
+        var url = req.body.url;
         if (!ytdl.validateURL(url)) {
             return res.sendStatus(400);
         }
@@ -31,10 +31,10 @@ routerDonwloadVideo.get('/formatomp4', async (req, res) => {
 });
 
 
-routerDonwloadVideo.get('/formatomp3', async (req, res) => {
+routerDonwloadVideo.post('/formatomp3', async (req, res) => {
 
     try {
-        var url = req.query.url;
+        var url = req.body.url;
         if (!ytdl.validateURL(url)) {
             return res.sendStatus(400);
         }

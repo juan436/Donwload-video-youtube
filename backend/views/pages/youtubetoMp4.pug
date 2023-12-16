@@ -6,13 +6,13 @@ block append config
 
 block tubevidemp4
   .block
-    form(action="/convertir" method="post" class="form-container")
+    form(action="/api/DonwloadVideo/formatomp4" method="post" class="form-container" enctype="x-www-form-urlencoded")
       label(for="enlace") Convertir Youtube a mp4
       .input-container
-        input(type="text" id="enlace" name="enlace" placeholder="Buscar o pegar enlace aqui...")
+        input(type="text" id="enlace" name="url" placeholder="Buscar o pegar enlace aqui...")
         button(type="submit") Empezar
     section
-      h3 ¿Cómo convertir videos Youtube?
+      h3 ¿Cómo convertir videos Youtube a Mp4?
       ol
         li Pega la URL de YouTube o inserta las palabras clave en la caja de búsqueda.
         li Escoge el formato de salida al cuál quieres convertir.
