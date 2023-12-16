@@ -1,12 +1,12 @@
 extends ../templates/template
 
 block append config
-  - page_title = "tubefastvide";
-  - pagina_actual = "principal";
+  - page_title = "tubefastvide"
+  - pagina_actual = "principal"
 
 block tubevidemp4
   .block
-    form(action="/api/DonwloadVideo/formatomp4" method="post" class="form-container" enctype="x-www-form-urlencoded")
+    form(action="/api/DonwloadVideo/formatomp4" method="post" class="form-container" enctype="x-www-form-urlencoded" )
       label(for="enlace") Convertir Youtube a mp4
       .input-container
         input(type="text" id="enlace" name="url" placeholder="Buscar o pegar enlace aqui...")
