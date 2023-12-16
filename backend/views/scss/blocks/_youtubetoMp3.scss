@@ -1,0 +1,108 @@
+.block {
+    height: 80vh;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 2rem;
+    color: #000;
+}
+
+form input, form button {
+    height: 40px;
+    font-size: 1rem;
+}
+
+form input {
+    flex-grow: 1;
+    padding: 0;
+    margin-right: 10px;
+    border: 2px solid #bb0101; 
+    border-radius: 5px;
+    width: 20rem; /* Ajusta el ancho del input */
+}
+
+
+form button {
+    background: #bb0101;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+form button:hover {
+    background: #ff3232;
+}
+
+section h3 {
+    margin-bottom: 20px;
+}
+
+section ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section ol li {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .block {
+        padding: 10px;
+    }
+
+    form label {
+        font-size: 1.5rem;
+    }
+
+    form input, form button {
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
+    form input {
+        width: 100%; /* Ajusta el ancho del input para pantallas pequeñas */
+    }
+
+    form button {
+        padding: 5px;
+    }
+}

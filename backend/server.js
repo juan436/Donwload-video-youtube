@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
     res.render('youtubetoMp4')
 });
 
+app.get('/youtubetoMp3', (req, res) => {
+    res.render('youtubetoMp3')
+});
+
    
 app.listen(port, () => {
     console.log(`El servidor esta escuchando en el puerto ${port}`);

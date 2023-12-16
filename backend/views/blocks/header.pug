@@ -1,8 +1,13 @@
 header
   h1 TubeFastVide
+  input(type="checkbox", id="menu-toggle", class="menu-toggle")
+  label(for="menu-toggle", class="hamburger-menu")
+    span
+    span
+    span
   nav
     ul
       li
-        a(href="#") Youtube to MP4
+        a(href="/" onclick="document.getElementById('menu-toggle').checked = false") Youtube to MP4
       li
-        a(href="#") Youtube to MP3
+        a(href="/youtubetomp3" onclick="document.getElementById('menu-toggle').checked = false") Youtube to MP3

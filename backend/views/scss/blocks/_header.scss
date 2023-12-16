@@ -1,34 +1,150 @@
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 1rem;
+  color: #fff;
+  background-color: #000;
+  position: fixed;
+  z-index: 50;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin-left: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #808080;
+  transition: transform 0.2s;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+  color: #bb0101;
+}
+
+header nav ul li:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para el menú de hamburguesa */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Estilos para pantallas pequeñas */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  header nav ul {
     display: flex;
-    justify-content: space-between;
+  }
+
+  header nav {
+    display: none;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
   }
-  
-  h1 {
-    font-size: 2em;
-    color: #333;
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  nav {
-    ul {
-      display: flex;
-      list-style: none;
-      
-      li {
-        margin-left: 15px;
-        
-        a {
-          text-decoration: none;
-          color: #333;
-          font-size: 1.2em;
-          
-          &:hover {
-            color: #bb0101;
-          }
-        }
-      }
-    }
+
+  header nav ul li {
+    margin-bottom: 1rem;
   }
-  
+
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+/* Mostrar el menú cuando se hace clic en el menú de hamburguesa */
+#menu-toggle:checked~nav {
+  display: flex;
+}
+
+/* Cambiar el menú de hamburguesa a una X cuando se hace clic en él */
+#menu-toggle:checked~.hamburger-menu span:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+#menu-toggle:checked~.hamburger-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked~.hamburger-menu span:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* FIN de las lineas para generar la x cuando se hace click en el menu de hamburguesa */

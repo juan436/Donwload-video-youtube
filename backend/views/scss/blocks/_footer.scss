@@ -1,0 +1,62 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+footer p {
+  color: #000000;
+  font-size: 1em;
+  order: 1; /* Coloca el texto del copyright en la parte superior */
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  color: #000000;
+  order: 2; /* Coloca los enlaces debajo del texto del copyright */
+}
+
+footer ul li {
+  margin-left: 15px;
+}
+
+footer a {
+    text-decoration: none !important;
+    color: #000000 !important; /* Cambia el color del texto de los enlaces a negro */
+    font-size: 0.8em;
+  }
+  
+  footer a:hover {
+    color: #bb0101 !important;
+  }
+
+/* Para pantallas pequeñas */
+@media (max-width: 767px) {
+    footer {
+      align-items: center; /* Centra los elementos en el eje transversal */
+    }
+  
+    footer p {
+      margin-bottom: 10px;
+      text-align: center; /* Centra el texto */
+    }
+  
+    footer ul {
+      flex-direction: column;
+      align-items: center; /* Centra los elementos en el eje transversal */
+    }
+  
+    footer ul li {
+      margin: 5px 0;
+      text-align: center; /* Centra el texto */
+    }
+  
+    footer ul li a {
+      font-size: 0.6em;
+      text-align: center; /* Centra el texto */
+    }
+  }
+  
